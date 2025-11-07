@@ -223,20 +223,6 @@ If something doesn't work:
 
 1. Take a screenshot of any error messages
 2. Note which step you're on
-3. Contact your implementation team with the screenshot
+3. Contact Ratan
 
 ---
-
-## Video Tutorial (Alternative)
-
-**Prefer video instructions?** Contact your team to request a screen recording walkthrough.
-
----
-
-**Remember:** After the initial setup, you only need to run one command to start the app:
-```
-cd C:\bond-loan-valuator
-node scripts/dev.js
-```
-
-Everything else is automatic!

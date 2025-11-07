@@ -1,0 +1,134 @@
+================================================================================
+BOND & LOAN VALUATOR - QUICK START
+================================================================================
+
+For non-technical users. Follow these 5 simple steps:
+
+--------------------------------------------------------------------------------
+STEP 1: INSTALL SOFTWARE (one-time only)
+--------------------------------------------------------------------------------
+
+Download and install these 3 programs (click "Next" through all defaults):
+
+1. Node.js: https://nodejs.org/
+   → Click the green "Download" button
+
+2. PostgreSQL: https://www.postgresql.org/download/windows/
+   → Download version 14 or newer
+   → IMPORTANT: Remember the password you set during install!
+
+3. Git: https://git-scm.com/downloads
+   → Install with all defaults
+
+RESTART YOUR COMPUTER after installing all three.
+
+--------------------------------------------------------------------------------
+STEP 2: DOWNLOAD THE APP
+--------------------------------------------------------------------------------
+
+1. Press Windows Key + R
+2. Type: cmd
+3. Press Enter
+4. Copy and paste these commands (press Enter after each):
+
+   cd C:\
+   git clone https://github.com/rgangs/bond-loan-valuator.git
+   cd bond-loan-valuator
+
+--------------------------------------------------------------------------------
+STEP 3: SETUP DATABASE (one-time only)
+--------------------------------------------------------------------------------
+
+In the same Command Prompt window, type:
+
+   psql -U postgres -c "CREATE DATABASE bondvaluator"
+
+(It will ask for your PostgreSQL password - the one you set in Step 1)
+
+Then type:
+
+   psql -U postgres -d bondvaluator -f database\schema.sql
+
+(Enter password again)
+
+--------------------------------------------------------------------------------
+STEP 4: CONFIGURE THE APP (one-time only)
+--------------------------------------------------------------------------------
+
+1. Open File Explorer and go to: C:\bond-loan-valuator\api-server
+
+2. Find the file named: .env.example
+
+3. Right-click it → Open with → Notepad
+
+4. Find this line:
+   DB_PASSWORD=your_password_here
+
+   Change "your_password_here" to your actual PostgreSQL password
+
+5. Find this line:
+   JWT_SECRET=your-super-secret-key-change-this
+
+   Change it to any random text you want (example: mysecret123)
+
+6. Save As → File name: .env → Save as type: All Files → Click Save
+
+--------------------------------------------------------------------------------
+STEP 5: RUN THE APP
+--------------------------------------------------------------------------------
+
+Every time you want to start the app:
+
+1. Press Windows Key + R
+2. Type: cmd
+3. Press Enter
+4. Type these commands:
+
+   cd C:\bond-loan-valuator
+   node scripts/dev.js
+
+5. Wait 1-2 minutes. The desktop app will open automatically!
+
+DEFAULT LOGIN:
+  Email: admin@example.com
+  Password: admin123
+
+(Change password after first login)
+
+--------------------------------------------------------------------------------
+DAILY USE - HOW TO START THE APP
+--------------------------------------------------------------------------------
+
+After initial setup, just do this:
+
+1. Open Command Prompt (Windows Key + R → type "cmd")
+2. Type: cd C:\bond-loan-valuator
+3. Type: node scripts/dev.js
+4. Wait for app to open
+
+That's it!
+
+--------------------------------------------------------------------------------
+TROUBLESHOOTING
+--------------------------------------------------------------------------------
+
+Problem: "command not found"
+Fix: Restart your computer
+
+Problem: "password authentication failed"
+Fix: Edit the .env file and fix the DB_PASSWORD line
+
+Problem: App doesn't open
+Fix: Open browser and go to: http://localhost:3000
+
+--------------------------------------------------------------------------------
+NEED HELP?
+--------------------------------------------------------------------------------
+
+Full guide: https://github.com/rgangs/bond-loan-valuator/blob/main/SIMPLE-SETUP.md
+
+Contact your implementation team with:
+- Screenshot of any error
+- Which step you're on
+
+================================================================================
