@@ -54,3 +54,12 @@ temp/
 
 # Local configuration
 local-config.json
+
+# Credentials and tokens
+*token*.txt
+*Token*.txt
+*TOKEN*.txt
+credentials.json
+secrets.json
+*.key
+*.pem
