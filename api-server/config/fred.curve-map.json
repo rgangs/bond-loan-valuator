@@ -1,0 +1,38 @@
+{
+  "US_Treasury_Latest": {
+    "endpoint": "treasury",
+    "currency": "USD",
+    "curveType": "zero"
+  },
+  "US_Corporate_AAA_Latest": {
+    "endpoint": "corporate",
+    "rating": "AAA",
+    "currency": "USD",
+    "curveType": "zero"
+  },
+  "US_Corporate_BAA_Latest": {
+    "endpoint": "corporate",
+    "rating": "BAA",
+    "currency": "USD",
+    "curveType": "zero"
+  },
+  "US_Corporate_HY_Latest": {
+    "endpoint": "corporate",
+    "rating": "HY",
+    "currency": "USD",
+    "curveType": "zero"
+  },
+  "US_Corporate_Spread_AAA_Latest": {
+    "endpoint": "corporate_spread",
+    "rating": "AAA",
+    "currency": "USD",
+    "curveType": "spread"
+  },
+  "US_Corporate_Spread_BAA_Latest": {
+    "endpoint": "corporate_spread",
+    "rating": "BAA",
+    "currency": "USD",
+    "curveType": "spread"
+  }
+}
+
